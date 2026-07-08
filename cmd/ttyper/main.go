@@ -3,6 +3,8 @@ package main
 import(
 	"fmt"
 	"github.com/Adarshrai24/ttyper/internal/ui"
+	"github.com/Adarshrai24/ttyper/internal/data"
+	"github.com/Adarshrai24/ttyper/internal/test"
 )
 
 func main() {
@@ -13,9 +15,11 @@ func main() {
 
 		if choice == 1 {
 			timeChoice := ui.ShowTimeMenu()
-			if timeChoice >= 0 {
-				break;
-			}
+			passageset := data.RandomParagraphPick()
+			result := test.Start(passageset.Passages, passageset.Current, timeChoice)
+			fmt.Println("WPM: ", result.WPM)
+			fmt.Println("Accuracy: ", result.Accuracy)
+			fmt.Println("TimeFormat: ", timeChoice)
 		} else if choice == 2 {
 
 		} else if choice == 3 {

@@ -33,6 +33,6 @@ func ShowTimeMenu() int {
 	case 4:
 		return 120
 	default:
-		return 30 // default
+		return 30
 	}
 }
