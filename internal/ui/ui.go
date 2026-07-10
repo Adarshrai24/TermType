@@ -2,6 +2,7 @@ package ui
 
 import(
 	"fmt"
+	"github.com/Adarshrai24/ttyper/internal/storage"
 )
 
 func ShowMainMenu() int {
@@ -36,3 +37,43 @@ func ShowTimeMenu() int {
 		return 30
 	}
 }
+
+func PrintHistory(history []storage.Session) {
+	fmt.Printf("%-10s %-10s %-12s %-10s\n", "GWPM", "NWPM", "Accuracy", "Duration")
+
+	fmt.Println("------------------------------------------------")
+
+	for _, session := range history {
+		fmt.Printf("%-10.2f %-10.2f %-12.2f %-10d\n",
+			session.GWPM,
+			session.NWPM,
+			session.Accuracy,
+			session.Duration,
+		)
+	}
+}
+
+func PrintMaxStats() {
+	fmt.Println("----------------MaximumStats--------------------")
+}
+
+func PrintAvgStats() {
+	fmt.Println("----------------AverageStats--------------------")
+}
+
+func PrintStats(stats []storage.Stats) {
+	fmt.Printf("%-10s %-10s %-10s %-10s\n",
+		"Duration", "GWPM", "NWPM", "Accuracy")
+	fmt.Println("------------------------------------------------")
+
+	for _, s := range stats {
+		fmt.Printf("%-10d %-10.2f %-10.2f %-10.2f\n",
+			s.Duration,
+			s.GWPM,
+			s.NWPM,
+			s.Accuracy,
+		)
+	}
+}
+
+

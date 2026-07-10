@@ -15,8 +15,8 @@ Accuracy = (total chars - mistakes)/total chars * 100
 */
 
 type Result struct {
-	GWPM int
-	NWPM int 
+	GWPM float64
+	NWPM float64
 	Accuracy float64
 }
 
@@ -86,8 +86,8 @@ func Start(passages []string, index int, duration int) Result {
 	}
 	fmt.Println()
 	//fmt.Println("Elapsed:", time.Since(start))
-	grossWordPerMinute := totalCharCount/duration * 12
-	netWordPerMinute := (totalCharCount - mistakes)/duration * 12
+	grossWordPerMinute := float64(totalCharCount)/float64(duration) * 12
+	netWordPerMinute := float64(totalCharCount - mistakes)/float64(duration) * 12
 	accuracy := float64(totalCharCount - mistakes)/float64(totalCharCount) * 100
 
 	result := Result{
