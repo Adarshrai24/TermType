@@ -1,4 +1,4 @@
-# ttyper
+# TermType
 
 A terminal-based typing speed test application built with Go and the Bubble Tea TUI framework. TermType measures your typing performance in the terminal with real-time feedback, persistent session history, and per-duration statistics.
 
