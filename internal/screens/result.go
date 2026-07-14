@@ -2,7 +2,7 @@ package screens
 
 import (
 	"strconv"
-	"github.com/Adarshrai24/ttyper/internal/test"
+	"github.com/Adarshrai24/TermType/internal/test"
 	tea "charm.land/bubbletea/v2"
 )
 

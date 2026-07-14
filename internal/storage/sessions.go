@@ -2,7 +2,7 @@ package storage
 
 import(
 	"database/sql"
-	"github.com/Adarshrai24/ttyper/internal/test"
+	"github.com/Adarshrai24/TermType/internal/test"
 )
 
 type Session struct {

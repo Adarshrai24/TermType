@@ -5,8 +5,8 @@ import (
 	"time"
 	tea "charm.land/bubbletea/v2"
 
-	"github.com/Adarshrai24/ttyper/internal/data"
-	"github.com/Adarshrai24/ttyper/internal/test"
+	"github.com/Adarshrai24/TermType/internal/data"
+	"github.com/Adarshrai24/TermType/internal/test"
 )
 
 type TestModel struct {

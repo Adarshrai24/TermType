@@ -6,8 +6,8 @@ import (
 
 	tea "charm.land/bubbletea/v2"
 
-	"github.com/Adarshrai24/ttyper/internal/screens"
-	"github.com/Adarshrai24/ttyper/internal/storage"
+	"github.com/Adarshrai24/TermType/internal/screens"
+	"github.com/Adarshrai24/TermType/internal/storage"
 )
 
 type Screen int

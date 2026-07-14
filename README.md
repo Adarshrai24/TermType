@@ -1,6 +1,6 @@
 # ttyper
 
-A terminal-based typing speed test application built with Go and the Bubble Tea TUI framework. ttyper measures your typing performance in the terminal with real-time feedback, persistent session history, and per-duration statistics.
+A terminal-based typing speed test application built with Go and the Bubble Tea TUI framework. TermType measures your typing performance in the terminal with real-time feedback, persistent session history, and per-duration statistics.
 
 ---
 
@@ -28,18 +28,18 @@ A terminal-based typing speed test application built with Go and the Bubble Tea 
 Clone the repository and build the binary:
 
 ```bash
-git clone https://github.com/Adarshrai24/ttyper.git
-cd ttyper
-go build -o ttyper ./cmd/ttyper
+git clone https://github.com/Adarshrai24/TermType.git
+cd TermType
+go build -o TermType ./cmd/TermType
 ```
 
 Run the application from the project root directory:
 
 ```bash
-./ttyper
+./TermType
 ```
 
-> **Note:** The application must be run from the project root directory. It reads passage data from `internal/data/english.txt` and writes session data to `ttyper.db`, both resolved relative to the working directory.
+> **Note:** The application must be run from the project root directory. It reads passage data from `internal/data/english.txt` and writes session data to `TermType.db`, both resolved relative to the working directory.
 
 ---
 
@@ -83,9 +83,9 @@ A "word" is defined as 5 characters, which is the standard WPM convention. The f
 The project follows a layered package structure with a clear separation of concerns.
 
 ```
-ttyper/
+TermType/
 ├── cmd/
-│   └── ttyper/
+│   └── TermType/
 │       └── main.go          # Application entry point
 ├── internal/
 │   ├── app/
@@ -106,12 +106,12 @@ ttyper/
 │       ├── db.go            # SQLite connection and schema initialisation
 │       ├── sessions.go      # Session persistence and history retrieval
 │       └── stats.go         # Aggregate query functions (AVG, MAX)
-└── ttyper.db                # SQLite database file (created on first run)
+└── TermType.db                # SQLite database file (created on first run)
 ```
 
 ### Package Responsibilities
 
-**`cmd/ttyper`**  
+**`cmd/TermType`**  
 The entry point. Creates a new Bubble Tea program with the root `app.Model` and runs it.
 
 **`internal/app`**  
@@ -168,7 +168,7 @@ Terminal output via Bubble Tea renderer
 
 ## Database Schema
 
-Session data is stored in a local SQLite file (`ttyper.db`) created automatically on first run.
+Session data is stored in a local SQLite file (`TermType.db`) created automatically on first run.
 
 ```sql
 CREATE TABLE IF NOT EXISTS sessions (

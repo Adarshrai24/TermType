@@ -1,9 +1,13 @@
-module github.com/Adarshrai24/ttyper
+module github.com/Adarshrai24/TermType
 
 go 1.25.0
 
 require (
-	charm.land/bubbletea/v2 v2.0.8 // indirect
+	charm.land/bubbletea/v2 v2.0.8
+	modernc.org/sqlite v1.53.0
+)
+
+require (
 	github.com/charmbracelet/colorprofile v0.4.3 // indirect
 	github.com/charmbracelet/ultraviolet v0.0.0-20260703014108-f5a850f9c2b7 // indirect
 	github.com/charmbracelet/x/ansi v0.11.7 // indirect
@@ -24,9 +28,7 @@ require (
 	github.com/xo/terminfo v0.0.0-20220910002029-abceb7e1c41e // indirect
 	golang.org/x/sync v0.21.0 // indirect
 	golang.org/x/sys v0.47.0 // indirect
-	golang.org/x/term v0.45.0 // indirect
 	modernc.org/libc v1.73.4 // indirect
 	modernc.org/mathutil v1.7.1 // indirect
 	modernc.org/memory v1.11.0 // indirect
-	modernc.org/sqlite v1.53.0 // indirect
 )

@@ -7,7 +7,7 @@ import (
 )
 
 func Open() (*sql.DB, error) {
-	db, err := sql.Open("sqlite", "ttyper.db")
+	db, err := sql.Open("sqlite", "TermType.db")
 	if err != nil {
 		return nil, err
 	}
