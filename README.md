@@ -196,6 +196,4 @@ All dependencies are managed via Go modules (`go.mod` / `go.sum`).
 
 ---
 
-## License
 
-This project is open source. See the repository for license details.
