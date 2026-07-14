@@ -43,6 +43,15 @@ Run the application from the project root directory:
 
 ---
 
+## Preview
+<p align="center">
+  <img src="assets/gifs/output.gif" width="31%">
+  &nbsp;
+  <img src="assets/screenshots/typing.png" width="31%">
+  &nbsp;
+  <img src="assets/screenshots/history.png" width="31%">
+</p>
+
 ## Usage
 
 ### Navigation
