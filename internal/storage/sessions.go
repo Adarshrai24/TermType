@@ -30,7 +30,8 @@ func SaveSession(db *sql.DB, result test.Result, duration int) error {
 func GetHistory(db *sql.DB) ([]Session, error) {
 	query := `
 		SELECT gwpm, nwpm, accuracy, duration FROM sessions
-		ORDER BY id DESC;
+		ORDER BY id DESC
+		LIMIT 20;
 	`
 
 	rows, err := db.Query(query)
